@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Dog_Seller.Models.Dog>
+
+@{
+    ViewBag.Title = "Index";
+}
+    <link rel="stylesheet" type="text/css" href="~/Content/dog-sheet.css">
+
+
+<section class="list-dog">
+    <h1 id="header-dog">Dog list</h1>
+    <table class="table" id="dogs">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Type)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Age)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Image)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Price)
+                </th>
+            </tr>
+        </thead>
+        @foreach (var item in Model)
+        {
+    <tbody>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                <img src="~/Images/@item.Image" alt="There is no Image for this dog" class="dog img-responsive" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+        </tr>
+    </tbody>
+        }
+
+    </table>
+</section>
+
+
+
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $("#dogs").DataTable();
+
+
+        });
+        </script>
+    
+    
+    }
