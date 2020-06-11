@@ -3,12 +3,12 @@
 @{
     ViewBag.Title = "Index";
 }
-    <link rel="stylesheet" type="text/css" href="~/Content/dog-sheet.css">
+<link rel="stylesheet" type="text/css" href="~/Content/dog-sheet.css">
 
 
 <section class="list-dog">
     <h1 id="header-dog">Dog list</h1>
-    <table class="table" id="dogs">
+    <table class="table table-bordered table-hover" id="dogs">
         <thead>
             <tr>
                 <th>
@@ -25,40 +25,37 @@
                 </th>
             </tr>
         </thead>
-        @foreach (var item in Model)
-        {
-    <tbody>
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Type)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Age)
-            </td>
-            <td>
-                <img src="~/Images/@item.Image" alt="There is no Image for this dog" class="dog img-responsive" />
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-        </tr>
-    </tbody>
-        }
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Type)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Age)
+                    </td>
+                    <td>
+                        <img src="~/Images/@item.Image" alt="There is no Image for this dog" class="dog img-responsive" />
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                </tr>
 
-    </table>
+            }
+        </tbody>
+        </table>
 </section>
 
 
 
-
-@section scripts{
+@section scripts
+    {
     <script>
         $(document).ready(function () {
+
             $("#dogs").DataTable();
-
-
         });
-        </script>
-    
-    
-    }
+    </script>
+}

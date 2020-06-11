@@ -23,11 +23,10 @@ namespace Dog_Seller.Controllers
         public ActionResult Index()
         {
             var dogs = _ApplicationDbContext.Dogs;
-            var a=dogs.OrderBy(m => m.Age);
             if (User.IsInRole("CanManage"))
-                return View("List", a);
+                return View("List", dogs);
 
-            return View("ReadOnlyList", a);
+            return View("ReadOnlyList", dogs);
         }
 
 
