@@ -18,7 +18,6 @@ namespace Dog_Seller.Controllers
             _ApplicationDbContext = new ApplicationDbContext();
         }
 
-        // GET: Dog
         [AllowAnonymous]
         public ActionResult Index()
         {
