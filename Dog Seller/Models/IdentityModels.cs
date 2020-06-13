@@ -21,7 +21,6 @@ namespace Dog_Seller.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<Dog> Dogs { get; set; }
-        public DbSet<Cat> Cats { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

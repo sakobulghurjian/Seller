@@ -168,7 +168,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\CatsController.cs" />
     <Compile Include="Controllers\DogsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -195,14 +194,12 @@
     <Compile Include="Migrations\202006060816265_seedusers.Designer.cs">
       <DependentUpon>202006060816265_seedusers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202006121505193_addcattodb.cs" />
-    <Compile Include="Migrations\202006121505193_addcattodb.Designer.cs">
-      <DependentUpon>202006121505193_addcattodb.cs</DependentUpon>
+    <Compile Include="Migrations\202006131840394_test.cs" />
+    <Compile Include="Migrations\202006131840394_test.Designer.cs">
+      <DependentUpon>202006131840394_test.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Animal.cs" />
-    <Compile Include="Models\Cat.cs" />
     <Compile Include="Models\Dog.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -483,10 +480,6 @@
     <Content Include="Views\Dogs\Edit.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Dogs\ReadOnlyList.cshtml" />
-    <Content Include="Views\Cats\List.cshtml" />
-    <Content Include="Views\Cats\ReadOnlyList.cshtml" />
-    <Content Include="Views\Cats\Create.cshtml" />
-    <Content Include="Views\Cats\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -520,8 +513,8 @@
     <EmbeddedResource Include="Migrations\202006060816265_seedusers.resx">
       <DependentUpon>202006060816265_seedusers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202006121505193_addcattodb.resx">
-      <DependentUpon>202006121505193_addcattodb.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202006131840394_test.resx">
+      <DependentUpon>202006131840394_test.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

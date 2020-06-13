@@ -7,13 +7,13 @@ namespace Dog_Seller.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class addcattodb : IMigrationMetadata
+    public sealed partial class test : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(addcattodb));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(test));
         
         string IMigrationMetadata.Id
         {
-            get { return "202006121505193_addcattodb"; }
+            get { return "202006131840394_test"; }
         }
         
         string IMigrationMetadata.Source

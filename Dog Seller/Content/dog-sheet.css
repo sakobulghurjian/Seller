@@ -34,7 +34,7 @@ h1 {
     letter-spacing: 1px;
 }
 
-#header-dog {
+.header-dog {
     text-align:center;
     color: #ff2f00;
 }
@@ -52,4 +52,10 @@ h1 {
 .dog{
     width:100px;
     height:auto;
+}
+
+
+
+#animals{
+    margin-top:50px;
 }
